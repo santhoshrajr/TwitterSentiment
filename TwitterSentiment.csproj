@@ -7,8 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TwitterSentimentML.ConsoleApp\**" />
+    <Compile Remove="TwitterSentimentML.Model\**" />
+    <Content Remove="TwitterSentimentML.ConsoleApp\**" />
+    <Content Remove="TwitterSentimentML.Model\**" />
+    <EmbeddedResource Remove="TwitterSentimentML.ConsoleApp\**" />
+    <EmbeddedResource Remove="TwitterSentimentML.Model\**" />
+    <None Remove="TwitterSentimentML.ConsoleApp\**" />
+    <None Remove="TwitterSentimentML.Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="linqtotwitter" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="TwitterSentimentML.Model\TwitterSentimentML.Model.csproj" />
   </ItemGroup>
 
 </Project>
