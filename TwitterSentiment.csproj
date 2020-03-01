@@ -35,4 +35,13 @@
     <ProjectReference Include="TwitterSentimentML.Model\TwitterSentimentML.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="bernie.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="biden.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
