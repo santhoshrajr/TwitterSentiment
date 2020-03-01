@@ -17,9 +17,10 @@ namespace TwitterSentimentML.ConsoleApp
         {
             // Create single instance of sample data from first line of dataset for model input
             ModelInput sampleData = CreateSingleDataSample(DATA_FILEPATH);
+            ConsumeModel consumeModel = new ConsumeModel();
 
             // Make a single prediction on the sample data and print results
-            ModelOutput predictionResult = ConsumeModel.Predict(sampleData);
+            ModelOutput predictionResult = consumeModel.Predict(sampleData);
 
             Console.WriteLine("Using model to make single prediction -- Comparing actual Col1 with predicted Col1 from sample data...\n\n");
             Console.WriteLine($"Wow... Loved this place.: {sampleData.TextToAnalyze}");
