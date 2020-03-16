@@ -1,9 +1,10 @@
-name: build-train
+name: intellicode-training
 
 on:
   push:
     branches: 
       - master
+      - github-action
 
 jobs:
   build:
